@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout-SHOP</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="check-out">
+    <div class="navigater">
+      <nav class="nav">
+        <input type="checkbox" id="menu-toggle">
+        <div class="slider-menu">
+          <a href="men's_outerwear.html" class="menus">Men's Outerwear</a>
+          <a href="ladies_outerwear.html" class="menus">Ladies Outerwear</a>
+          <a href="men's_tshirt.html" class="menus">Men's T-Shirts</a>
+          <a href="ladies_tshirt.html" class="menus">Ladies T-shirts</a>
+        </div>
+        <label for="menu-toggle" class="menu-close"></label>
+        <label for="menu-toggle" id="toggle">&#9776;</label>
+      </nav>
+      <a href="index.html" id="heading">SHOP</a>
+      <a href="cart.html">
+        <img src="images/cart.svg" alt="cart" width="25px">
+      </a>
+    </div>
+
+    <section class="description">
+      <span>Checkout</span>
+      <span class="volume">shop is a demo app-form data will not be sent</span>
+    </section>
+
+    <section class="data">
+      <section class="information">
+        <h3>Account Information</h3>
+        <form action="#" class="form">
+          <input type="text" id="email" placeholder="Email" required>
+          <span class="error-message">This field is required</span>
+          <input type="number" id="phone-number" placeholder="Phone Number">
+          <h3>Shipping Address</h3>
+          <input type="text" id="address" placeholder="Address">
+          <input type="text" id="city" placeholder="City">
+          <span class="state">
+            <input type="text" class="code" placeholder="State/Province">
+            <input type="number" class="code" placeholder="Zip/Postalcode">
+          </span>
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="united-states">United States</option>
+            <option value="canada">Canada</option>
+          </select>
+        </form>
+        <h3>Billing Address</h3>
+        <div class="bill-toggle">
+          <input type="checkbox" id="billing-toggle">
+          <pre>Use different billing address</pre>
+        </div>
+        <form action="" class="form" id="billing-address">
+          <input type="text" id="address" placeholder="Address">
+          <input type="text" id="city" placeholder="City">
+          <span class="state">
+            <input type="text" class="code" placeholder="State/Province">
+            <input type="number" class="code" placeholder="Zip/Postalcode">
+          </span>
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="united-states">United States</option>
+            <option value="canada">Canada</option>
+          </select>
+        </form>
+      </section>
+      <section class="payment">
+        <h3>Payment Method</h3>
+        <form action="#" class="form">
+          <input type="text" id="name" placeholder="Cardholder Name">
+          <input type="number" id="card-number" placeholder="Card Number">
+          <p>Expiry</p>
+          <span> 
+            <select name="months" id="months" class="expiry">
+              <option value="jan">Jan</option>
+              <option value="feb">Feb</option>
+              <option value="mar">Mar</option>
+              <option value="apr">Apr</option>
+              <option value="may">May</option>
+              <option value="jun">Jun</option>
+              <option value="jul">Jul</option>
+              <option value="aug">Aug</option>
+              <option value="sep">Sep</option>
+              <option value="oct">Oct</option>
+              <option value="nov">Nov</option>
+              <option value="dec">Dec</option>
+            </select>
+            <select name="year" id="year" class="expiry">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+            <input type="number" id="cvv" placeholder="CVV">
+          </span>
+        </form>
+        <section class="summary">
+          <h3>Oreder Summary</h3>
+          <section  class="name">
+            <span>YouTube Unisex Flex Fleece Zip Hoodie</span>
+            <span>$90.50</span>
+          </section>
+          <section class="total">
+            <span>Total</span>
+            <span>$90.50</span>
+          </section>
+          <!-- <a href="#" class="button">a</a> -->
+          <input type="checkbox" id="place-order"hidden>
+          <label for="place-order" class="button">PLACCE ORDER</label>
+        </section>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>Made by Polymer</span>
+      <span class="demo">Demo only</span>
+    </footer>
+  </main>
+</body>
+
+</html>
