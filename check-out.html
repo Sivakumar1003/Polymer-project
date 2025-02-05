@@ -39,14 +39,23 @@
         <h3>Account Information</h3>
         <form action="#" class="form">
           <input type="text" id="email" placeholder="Email" required>
-          <span class="error-message">This field is required</span>
-          <input type="number" id="phone-number" placeholder="Phone Number">
+          <span class="error-message">Invalid Email</span>
+          <input type="number" id="phone-number" placeholder="Phone Number" required>
+          <span class="error-message">Invalid Phone Number</span>
           <h3>Shipping Address</h3>
-          <input type="text" id="address" placeholder="Address">
-          <input type="text" id="city" placeholder="City">
-          <span class="state">
-            <input type="text" class="code" placeholder="State/Province">
-            <input type="number" class="code" placeholder="Zip/Postalcode">
+          <input type="text" id="address" placeholder="Address" required>
+          <span class="error-message">Invalid Address</span>
+          <input type="text" id="city" placeholder="City" required>
+          <span class="error-message">Invalid City</span>
+          <span class="state-code">
+            <span class="state">
+              <input type="text" class="code" placeholder="State/Province" required>
+              <span class="error-message">Invalid State/Province</span>
+            </span class="state">
+            <span class="state">
+              <input type="number" class="code" placeholder="Zip/Postalcode" required>
+              <span class="error-message">Invalid Zip/Postalcode</span>
+            </span>
           </span>
           <label for="country">Country</label>
           <select name="country" id="country">
@@ -60,11 +69,19 @@
           <pre>Use different billing address</pre>
         </div>
         <form action="" class="form" id="billing-address">
-          <input type="text" id="address" placeholder="Address">
-          <input type="text" id="city" placeholder="City">
-          <span class="state">
-            <input type="text" class="code" placeholder="State/Province">
-            <input type="number" class="code" placeholder="Zip/Postalcode">
+          <input type="text" id="address" placeholder="Address" required>
+          <span class="error-message">Invalid Address</span>
+          <input type="text" id="city" placeholder="City" required>
+          <span class="error-message">Invalid City</span>
+          <span class="state-code">
+            <span class="state">
+              <input type="text" class="code" placeholder="State/Province" required>
+              <span class="error-message">Invalid State/Province</span>
+            </span class="state">
+            <span class="state">
+              <input type="number" class="code" placeholder="Zip/Postalcode" required>
+              <span class="error-message">Invalid Zip/Postalcode</span>
+            </span>
           </span>
           <label for="country">Country</label>
           <select name="country" id="country">
@@ -76,10 +93,12 @@
       <section class="payment">
         <h3>Payment Method</h3>
         <form action="#" class="form">
-          <input type="text" id="name" placeholder="Cardholder Name">
-          <input type="number" id="card-number" placeholder="Card Number">
+          <input type="text" id="name" placeholder="Cardholder Name" required>
+          <span class="error-message">Invalid Cardholder Name</span>
+          <input type="number" id="card-number" placeholder="Card Number" required>
+          <span class="error-message">Invalid Card Number</span>
           <p>Expiry</p>
-          <span> 
+          <span>
             <select name="months" id="months" class="expiry">
               <option value="jan">Jan</option>
               <option value="feb">Feb</option>
@@ -107,12 +126,15 @@
               <option value="2025">2025</option>
               <option value="2026">2026</option>
             </select>
-            <input type="number" id="cvv" placeholder="CVV">
+            <span class="cvv">
+              <input type="number" id="cvv" placeholder="CVV" required>
+              <span class="error-message">Invalid CVV</span>
+            </span>
           </span>
         </form>
         <section class="summary">
           <h3>Oreder Summary</h3>
-          <section  class="name">
+          <section class="name">
             <span>YouTube Unisex Flex Fleece Zip Hoodie</span>
             <span>$90.50</span>
           </section>
@@ -121,7 +143,7 @@
             <span>$90.50</span>
           </section>
           <!-- <a href="#" class="button">a</a> -->
-          <input type="checkbox" id="place-order"hidden>
+          <input type="checkbox" id="place-order" hidden>
           <label for="place-order" class="button">PLACCE ORDER</label>
         </section>
       </section>

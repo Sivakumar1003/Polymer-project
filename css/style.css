@@ -357,12 +357,28 @@ a {
 }
 
 .check-out .data .code {
-    width: 48%;
+    width: 95%;
 }
 
-.check-out .data .state {
-    display: flex;
+.check-out .data .state-code .error-message{ 
+    padding-top: 15px;
+}
+
+.check-out .data .state-code {
+    display:flex;
     justify-content: space-between;
+}
+
+.check-out .data .state-code .state{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.check-out .data .payment .cvv .error-message {
+    padding-top: 12px;
+    left: 62%;
+    /* background-color: red; */
 }
 
 .check-out .data select {
@@ -419,6 +435,13 @@ a {
 .data:has(#place-order:checked) input:invalid+.error-message {
     display: block;
 }
+
+.data:has(#place-order:checked) input:invalid::placeholder{
+    color: red;
+    transition: 0.35s;
+    transform: translateY(-18px);
+    font-size: 14px;
+}
 .data:has(a:active) input:invalid+.error-message {
     display: block;
 }
@@ -426,6 +449,27 @@ a {
 .data:has(a:active) input:valid > #place-order {
     
 }
+
+.form input {
+    position: relative;
+  }
+  
+  .form input::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.6s ease-in-out, left 0.6s ease-in-out;
+  }
+  
+  .form input:focus::after {
+    width: 100%;
+    left: 0;
+  }
+    
 
 @media screen and (min-width: 700px) {
     .navigater #toggle {
@@ -452,10 +496,16 @@ a {
     .clothes-details>img {
         padding-top: 25px;
         padding-bottom: 25px;
-        display: inline;
-        object-fit: cover;
+        display: flex;
+        justify-self: center;
         width: 100%;
+        max-width: 1400px;
         height: 300px;
+    }
+
+    .clothes-details .clothes-menu {
+        max-width: 1400px;
+        justify-self: center;
     }
 
     .clothes-details .clothes-menu a img {
@@ -484,13 +534,19 @@ a {
     .product-details {
         display: flex;
         flex-direction: row;
+        max-width: 1400px;
+        justify-self: center;
     }
-
+    
     .product-details .image {
         width: 50%;
         display: flex;
         justify-content: center;
-        zoom: 125%;
+        zoom: 150%;
+    }
+    
+    .product-details .image img{
+        width: 110%;
     }
 
     .check-out .button,
