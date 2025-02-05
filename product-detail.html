@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Item Page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="single-page">
+        <div class="navigater">
+            <nav class="nav">
+                <input type="checkbox" id="menu-toggle">
+                <div class="slider-menu">
+                    <a href="men's_outerwear.html" class="menus">Men's Outerwear</a>
+                    <a href="ladies_outerwear.html" class="menus">Ladies Outerwear</a>
+                    <a href="men's_tshirt.html" class="menus">Men's T-Shirts</a>
+                    <a href="ladies_tshirt.html" class="menus">Ladies T-shirts</a>
+                </div>
+                <label for="menu-toggle" class="menu-close"></label>
+                <label for="menu-toggle" id="toggle">&#9776;</label>
+                <a href="javascript: history.go(-1)" id="back"><img src="images/arrow-icon.png" alt=""></a>
+            </nav>
+            <a href="index.html" id="heading">SHOP</a>
+            <a href="cart.html">
+                <img src="images/cart.svg" alt="cart" width="25px">
+            </a>
+        </div>
+        <nav class="navigater-two">
+            <a href="men's_outerwear.html">Men's Outerwear</a>
+            <a href="ladies_outerwear.html">Ladies Outerwear</a>
+            <a href="men's_tshirt.html">Men's T-Shirts</a>
+            <a href="ladies_tshirt.html">Ladies T-shirts</a>
+        </nav>
+
+        <section class="product-details">
+            <section class="image">
+                <img src="images/mens_outerwear_16.jpg" alt="">
+            </section>
+            <section class="product-description">
+                <span class="name">Inbox - Subtle Actions T-Shirt</span>
+                <span class="price">$17.05</span>
+                <hr>
+                <span class="size">
+                    <p>Size</p>
+                    <select name="size" id="size">
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m" selected>M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                </span>
+                <hr>
+                <span class="quantity">
+                    <p>Quantity</p>
+                    <select name="quantity" id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </span>
+                <span class="des-heading">Description</span>
+                <span class="des">Our popular flex fleece hoodie, now for YouTube fans everywhere.</span>
+                <span class="features">Features:</span>
+                <span class="features-list">
+                    <li>50% polyester, 50% cotton fleece.</li>
+                    <li>Sporty, unisex fit.</li>
+                    <li>Metal zipper.</li>
+                    <li>Hood.</li>
+                    <li>Available in dark heather grey with the YouTube logo embroidered at left bicep.</li>
+                </span>
+                <a href="cart.html" class="button">ADD TO CART</a>
+            </section>
+        </section>
+
+        <footer class="footer">
+            <span>Made by Polymer</span>
+            <span class="demo">Demo only</span>
+        </footer>
+    </main>
+</body>
+</html>
