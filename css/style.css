@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.navigater {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.navigater #heading {
+    letter-spacing: 6px;
+    font-weight: 100px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.slider-menu {
+    width: 45%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    background-color: #fff;
+    transition: 0.5s;
+    padding-top: 15px;
+}
+
+#menu-toggle:checked~.slider-menu {
+    left: 0;
+}
+
+.menu-close {
+    position: fixed;
+    width: 55%;
+    height: 100%;
+    right: 0;
+    visibility: hidden;
+}
+
+#menu-toggle:checked~.menu-close {
+    visibility: visible;
+}
+
+.navigater .slider-menu a {
+    padding: 10px;
+    text-align: start;
+    font-size: 14px;
+    opacity: 75%;
+}
+
+.navigater-two {
+    display: none;
+}
+
+.main-menus {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.menus {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.menus .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.main-menus .details img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    zoom: 110%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    border: 2px solid;
+    padding: 8px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 40px;
+    color: rgb(97, 97, 97);
+    font-size: 12px;
+
+}
+
+.cart .footer {
+    position: absolute;
+    bottom: 0;
+    left: 44%;
+}
+
+.footer .demo {
+    background-color: black;
+    color: white;
+    width: 90px;
+    padding: 10px;
+    text-align: center;
+}
+
+.clothes-details>img {
+    display: none;
+}
+
+.check-out .description,
+.cart .your-cart,
+.clothes-details .mens_tshirts,
+.clothes-details .ladies_outerwear,
+.clothes-details .ladies_tshirt,
+.clothes-details .mens-outerwear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-out .description .volume,
+.cart .your-cart .volume,
+.clothes-details .volume {
+    opacity: 65%;
+}
+
+.clothes-details .clothes-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.clothes-details .clothes-menu a img {
+    width: 100%;
+}
+
+.clothes-details .clothes-menu a {
+    width: 49%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.clothes-details .clothes-menu .name {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.clothes-details .clothes-menu .price {
+    font-size: 14px;
+    opacity: 75%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.single-page .navigater #toggle {
+    display: none;
+}
+
+.single-page .navigater #toggle {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+
+.product-details .product-description {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    font-size: 13px;
+    gap: 15px;
+    opacity: 75%;
+}
+
+.product-details .product-description .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 100%;
+}
+
+.product-details .product-description .des-heading {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.check-out .button,
+.cart .total .button,
+.product-details .product-description .button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(23, 44, 80, 255);
+    color: white;
+    border: none;
+    opacity: 1;
+    height: 4%;
+    font-size: 1rem;
+    font-weight: 150;
+    padding-top: 20px;
+}
+
+.product-details .product-description .quantity,
+.product-details .product-description .size {
+    display: flex;
+    gap: 25px;
+    font-size: 15px;
+}
+
+.product-details .product-description #quantity,
+.product-details .product-description #size {
+    border: none;
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.check-out .footer,
+.cart .footer,
+.single-page .footer {
+    visibility: hidden;
+}
+
+.cart .cart-container {
+    width: 90%;
+    justify-self: center;
+    max-width: 1200px;
+}
+
+.cart .cart-container .cart-row {
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+}
+
+.cart .cart-container .cart-row .cart-image img {
+    height: 80%;
+    padding-top: 10%;
+}
+
+.cart .cart-container .cart-row .cart-details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+}
+
+.cart .cart-container .cart-row .cart-details .name {
+    font-size: 14px;
+    height: 50%;
+    padding-top: 40px;
+    padding-left: 25px;
+}
+
+.cart .cart-container .cart-row .cart-details .price-detail {
+    align-content: end;
+    opacity: 75%;
+    padding-bottom: 40px;
+    align-self: flex-end;
+    display: flex;
+    gap: 20px;
+}
+
+.cart .cart-container .cart-row .cart-details .remove {
+    position: absolute;
+    top: 25%;
+    right: 4%;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 55%;
+}
+
+.cart .total {
+    justify-self: end;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.cart .total .total-price {
+    opacity: 75%;
+}
+
+.check-out .data {
+    width: 90%;
+    justify-self: center;
+    margin-top: 20px;
+    display: flex;
+    max-width: 1300px;
+    flex-direction: column;
+}
+
+.check-out .data .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.check-out .data .bill-toggle {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.check-out .data #billing-address {
+    display: none;
+}
+
+.information:has(#billing-toggle:checked) #billing-address {
+    display: flex;
+}
+
+.check-out .data .bill-toggle pre {
+    align-content: center;
+}
+
+.check-out .data input {
+    border: none;
+    border-bottom: 2px solid rgb(170, 170, 170);
+    outline: none;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.check-out .data .code {
+    width: 48%;
+}
+
+.check-out .data .state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-out .data select {
+    border: none;
+    background-color: #fff;
+    padding-bottom: 20px;
+    outline: none;
+}
+
+.check-out .data h3 {
+    padding: 10px 10px 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.check-out .data .payment #cvv,
+.check-out .data .payment .expiry {
+    width: 30%;
+    border-bottom: 2px solid rgb(170, 170, 170);
+    padding-bottom: 10px;
+}
+
+.check-out .data .payment #cvv {
+    padding: 0;
+    padding-top: 5px;
+}
+
+.check-out .data .payment .summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.check-out .data .payment .summary .total,
+.check-out .data .payment .summary .name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.check-out input:focus::placeholder {
+    transition: 0.35s;
+    transform: translateY(-18px);
+    font-size: 14px;
+}
+.error-message {
+    position: relative;
+    top: -10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.data:has(#place-order:checked) input:invalid+.error-message {
+    display: block;
+}
+.data:has(a:active) input:invalid+.error-message {
+    display: block;
+}
+
+.data:has(a:active) input:valid > #place-order {
+    
+}
+
+@media screen and (min-width: 700px) {
+    .navigater #toggle {
+        padding: 15px;
+        display: none;
+    }
+
+    .navigater input {
+        display: none;
+    }
+
+    .navigater-two {
+        display: flex;
+        justify-content: center;
+        gap: 2.5%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .main-menus .details img {
+        height: 350px;
+    }
+
+    .clothes-details>img {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: inline;
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+
+    .clothes-details .clothes-menu a img {
+        width: 75%;
+        height: 75%;
+    }
+
+    .clothes-details .clothes-menu a {
+        width: 32%;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .clothes-details .clothes-menu .price {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .check-out .footer,
+    .cart .footer,
+    .single-page .footer {
+        visibility: visible;
+        padding-top: 10px;
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-details .image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        zoom: 125%;
+    }
+
+    .check-out .button,
+    .product-details .product-description .button {
+        position: static;
+        background-color: #fff;
+        color: black;
+        border: 2px solid;
+        padding: 8px;
+        width: 30%;
+        height: 25px;
+        font-size: 14px;
+        align-content: center;
+    }
+
+    .cart .cart-container .cart-row .cart-details {
+        flex-direction: row;
+    }
+
+    .cart .cart-container .cart-row .cart-details .name {
+        width: 50%;
+        height: auto;
+        align-self: center;
+        padding: 0;
+        text-align: center;
+    }
+
+    .cart .cart-container .cart-row .cart-details .price-detail {
+        width: 50%;
+        align-self: center;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+    }
+
+    .cart .cart-container .cart-row .cart-details .remove {
+        position: static;
+        align-self: center;
+    }
+
+    .cart .total .button {
+        position: static;
+        background-color: #fff;
+        color: black;
+        border: 2px solid;
+        padding: 8px;
+        width: 40%;
+        height: 25px;
+        font-size: 14px;
+        align-content: center;
+        padding: 5px;
+    }
+
+    .check-out .data .payment .button {
+        font-size: 12px;
+    }
+    .check-out .data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+        max-width: 1200px;
+    }
+
+    .check-out .data .information,
+    .check-out .data .payment {
+        width: 46%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-menus {
+        margin: 0 5% 0 5%;
+    }
+
+    .main-menus .details img {
+        height: 350px;
+    }
+}
