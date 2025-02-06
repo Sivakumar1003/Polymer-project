@@ -360,16 +360,16 @@ a {
     width: 95%;
 }
 
-.check-out .data .state-code .error-message{ 
+.check-out .data .state-code .error-message {
     padding-top: 15px;
 }
 
 .check-out .data .state-code {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
-.check-out .data .state-code .state{
+.check-out .data .state-code .state {
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -425,6 +425,7 @@ a {
     transform: translateY(-18px);
     font-size: 14px;
 }
+
 .error-message {
     position: relative;
     top: -10px;
@@ -432,44 +433,22 @@ a {
     font-size: 12px;
     display: none;
 }
-.data:has(#place-order:checked) input:invalid+.error-message {
+
+.data:has(#submit:checked) input:invalid+.error-message {
     display: block;
 }
 
-.data:has(#place-order:checked) input:invalid::placeholder{
+.data:has(#submit:checked) input:invalid::placeholder {
     color: red;
     transition: 0.35s;
     transform: translateY(-18px);
     font-size: 14px;
 }
-.data:has(a:active) input:invalid+.error-message {
-    display: block;
+
+.data:has(#submit:checked) .payment .button {
+    max-width: 65%;
 }
 
-.data:has(a:active) input:valid > #place-order {
-    
-}
-
-.form input {
-    position: relative;
-  }
-  
-  .form input::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.6s ease-in-out, left 0.6s ease-in-out;
-  }
-  
-  .form input:focus::after {
-    width: 100%;
-    left: 0;
-  }
-    
 
 @media screen and (min-width: 700px) {
     .navigater #toggle {
@@ -537,15 +516,15 @@ a {
         max-width: 1400px;
         justify-self: center;
     }
-    
+
     .product-details .image {
         width: 50%;
         display: flex;
         justify-content: center;
         zoom: 150%;
     }
-    
-    .product-details .image img{
+
+    .product-details .image img {
         width: 110%;
     }
 
@@ -602,18 +581,34 @@ a {
     .check-out .data .payment .button {
         font-size: 12px;
     }
+
     .check-out .data {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 50px;
+    }
+
+    .check-out .data,
+    .check-out .description {
         max-width: 1200px;
+        justify-self: center;
     }
 
     .check-out .data .information,
     .check-out .data .payment {
         width: 46%;
     }
+
+    .data:has(#submit:checked) .payment .button {
+        position: relative;
+        max-width: 60%;
+    }
+
+    body:has(#submit:checked) .check-out {
+        justify-content: center;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
